@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { count } from '../count';
+---
+
+<Layout title='astrohtmx'>
+  <button
+    class="text-white"
+    hx-select="#count"
+    hx-post="/count"
+    hx-swap="innerHTML"
+  >
+    {count()}
+  </button>
+</Layout>
